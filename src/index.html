@@ -5,43 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../dist/output.css" rel="stylesheet">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Sambalod's Calculator</title>
 </head>
-<body class="bg-lime-300">
-    <h1 class="text-3xl flex justify-center">
-        Basic Calculator
+<body class="flex flex-col bg-fixed" style="background-image: url(https://i.imgur.com/cUuceYU.jpg); background-repeat: no-repeat; background-position: center;">
+    <div class="backdrop-blur-md pb-12">
+    <h1 class="text-5xl text-cyan-100 font-medium flex justify-center pt-8">
+        SIMPLE CALCULATOR
     </h1>
-    <div class="container mx-auto flex">
-        <div class="container mx-auto justify-center bg-gray-500 w-2/5 px-px-10">
-            <div class="grid grid-cols-5 gap-4">
-                <div class="border-red-600 border-2 col-span-5 h-24">01</div>
-                <div class="border-red-600 border-2 col-span-5 h-24">02</div>
+    <div class="container mx-auto mt-10 2xl:bg-green-300 rounded-xl">
+        <div class="container mx-auto justify-center xl:bg-gray-500 w-4/5 py-20">
+            <div class="container mx-auto w-3/6 rounded-xl" style="background-color: #dcdcdc;">
+                <div class="grid grid-cols-5 gap-4 p-10">
+                    <input class="border-2 border-blue-400 bg-black text-white rounded-2xl col-span-5 h-24 text-3xl text-right p-5
+                    focus:outline-none focus:shadow-outline" id="username" type="text" disabled="">
+                    <input class="border-2 border-blue-300 rounded-2xl col-span-5 h-24 bg-gradient-to-b from-cyan-300 to-green-200 
+                    text-3xl text-right p-5 focus:outline-none focus:shadow-outline" id="username" type="text" disabled="">
 
-                <button class="border-red-600 border-2 h-24">03</button>
-                <button class="border-red-600 border-2">04</button>
-                <button class="border-red-600 border-2">05</button>
-                <button class="border-red-600 border-2">06</button>
-                <button class="border-red-600 border-2">07</button>
+                    <button class="border-2 border-gray-300 bg-gray-200 shadow-xl rounded-2xl font-sans text-3xl h-16">7</button>
+                    <button class="border-2 border-gray-300 bg-gray-200 shadow-xl rounded-2xl font-sans text-3xl">8</button>
+                    <button class="border-2 border-gray-300 bg-gray-200 shadow-xl rounded-2xl font-sans text-3xl">9</button>
+                    <button class="border-2 border-blue-300 bg-gradient-to-b from-blue-200 to-blue-400 shadow-xl rounded-2xl font-sans text-3xl">÷</button>
+                    <button class="border-2 border-cyan-400 bg-gradient-to-b from-cyan-300 to-cyan-400 shadow-xl rounded-2xl font-sans text-3xl">±</button>
 
-                <button class="border-red-600 border-2 h-24">08</button>
-                <button class="border-red-600 border-2">09</button>
-                <button class="border-red-600 border-2">10</button>
-                <button class="border-red-600 border-2">11</button>
-                <button class="border-red-600 border-2">12</button>
+                    <button class="border-2 border-gray-300 bg-gray-200 shadow-xl rounded-2xl font-sans text-3xl h-16">4</button>
+                    <button class="border-2 border-gray-300 bg-gray-200 shadow-xl rounded-2xl font-sans text-3xl">5</button>
+                    <button class="border-2 border-gray-300 bg-gray-200 shadow-xl rounded-2xl font-sans text-3xl">6</button>
+                    <button class="border-2 border-blue-300 bg-gradient-to-b from-blue-200 to-blue-400 shadow-xl rounded-2xl font-sans text-3xl">×</button>
+                    <button class="border-2 border-cyan-400 bg-gradient-to-b from-cyan-300 to-cyan-400 shadow-xl rounded-2xl font-sans text-3xl">√</button>
 
-                <button class="border-red-600 border-2 h-24">13</button>
-                <button class="border-red-600 border-2">14</button>
-                <button class="border-red-600 border-2">15</button>
-                <button class="border-red-600 border-2">16</button>
-                <button class="border-red-600 border-2">17</button>
+                    <button class="border-2 border-gray-300 bg-gray-200 shadow-xl rounded-2xl font-sans text-3xl h-16">1</button>
+                    <button class="border-2 border-gray-300 bg-gray-200 shadow-xl rounded-2xl font-sans text-3xl">2</button>
+                    <button class="border-2 border-gray-300 bg-gray-200 shadow-xl rounded-2xl font-sans text-3xl">3</button>
+                    <button class="border-2 border-blue-300 bg-gradient-to-b from-blue-200 to-blue-400 shadow-xl rounded-2xl font-sans text-3xl">—</button>
+                    <button class="border-2 border-blue-300 bg-gradient-to-b from-blue-200 to-blue-400 shadow-xl rounded-2xl font-sans text-3xl">%</button>
 
-                <button class="border-red-600 border-2 h-24">18</button>
-                <button class="border-red-600 border-2">19</button>
-                <button class="border-red-600 border-2">20</button>
-                <button class="border-red-600 border-2">21</button>
-                <button class="border-red-600 border-2">22</button>
-            </div>
+                    <button class="border-2 border-gray-300 bg-gray-200 shadow-xl rounded-2xl font-sans text-3xl h-16">0</button>
+                    <button class="border-2 border-gray-300 bg-gray-200 shadow-xl rounded-2xl font-sans text-3xl">.</button>
+                    <button class="border-2 border-lime-400 bg-gradient-to-b from-lime-200 to-lime-400 shadow-xl rounded-2xl font-sans text-3xl">C</button>
+                    <button class="border-2 border-blue-300 bg-gradient-to-b from-blue-200 to-blue-400 shadow-xl rounded-2xl font-sans text-3xl">+</button>
+                    <button class="border-2 border-blue-300 bg-gradient-to-b from-blue-200 to-blue-400 shadow-xl rounded-2xl font-sans text-3xl">=</button>
+                </div>
+            </div>    
         </div>
+    </div>
     </div>
 </body>
 </html>
